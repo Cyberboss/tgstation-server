@@ -216,12 +216,12 @@ namespace TGServerService
 					if (!RestartInProgress)
 					{
 						SendMessage("DD: Server started, watchdog active...", ChatMessageType.WatchdogInfo);
-						TGServerService.WriteInfo("Watchdog started", TGServerService.EventID.DDWatchdogStarted);
+						TGServerService.WriteInfo("Watchdog started", EventID.DDWatchdogStarted);
 					}
 					else
 					{
 						RestartInProgress = false;
-						TGServerService.WriteInfo("Watchdog started", TGServerService.EventID.DDWatchdogRestarted);
+						TGServerService.WriteInfo("Watchdog started", EventID.DDWatchdogRestarted);
 					}
 				}
 				var retries = 0;
